@@ -3,8 +3,8 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>WeMadeIT | Work</title>
+        <link rel="stylesheet" href="navbar.css">
         <link rel="stylesheet" type="text/css" href="work.css">
-        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <div class="nav">                
@@ -36,5 +36,35 @@
                 </defs>
               </svg>
         </div>
+        <section class="sec">
+          <div class="context">
+            <div class="textBox">
+                <h2>Site's We Work On<br><span>AriTheArchiTect</span></h2>
+                <p>Ari the Architect</p>
+                <a onclick="location.href='https://arithearchitect.com'">View Site</a>
+            </div>
+            <div class="imgBox">
+            <img src="imgs/AriIcon.jpg" class="arisite">
+            </div>
+          </div>
+          <ul class="thumb">
+            <li><img src="imgs/AriIcon.jpg" onclick="imgSlider('imgs/AriIcon.jpg');changeText('arithearchitect', 'Ari the Architect', 'https://arithearchitect.com')"></li>
+            <li><img src="imgs/Jeanette.png" onclick="imgSlider('imgs/Jeanette.png');changeText('letsbeforreal', 'Lets Be Forreal', 'https://letsbeforreal.com')"></li>
+            <li><img src="imgs/America.png" onclick="imgSlider('imgs/America.png');changeText('americadiy', 'America\'s Diy', 'https://americasdiy.com')"></li>
+          </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector('.arisite').src = anything;
+            }
+            function changeText(text1, text  , link){
+                document.querySelector("span").innerHTML = text1;
+                document.querySelector("p").innerHTML = text;
+                document.querySelector(".context .textBox a").onclick = function() {
+                  location.href=link;
+                }
+            }
+        </script>
+
     </body>
 </html>
