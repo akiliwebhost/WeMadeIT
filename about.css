@@ -15,3 +15,16 @@
     height: 88%;
     align-items: center;
 }
+.col{
+    flex-basis: 50%;
+}
+h1{
+    color: black;
+    font-size: 100px;
+
+}
+p{
+    color: #fff;
+    font-size: 11px;
+    line-height: 15px;
+}
